@@ -9,7 +9,9 @@ app.use(bodyParser.json());
 const { Gateway, Wallets } = require('fabric-network');
 const path = require('path');
 const fs = require('fs');
-
+const cors = require("cors");
+app.use(express.json());
+app.use(cors());
 
 // app.get('/api/queryallproperties', async function (req, res) {
 //     try {
